@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 6</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            packages: [{
+                name: "epam",
+                location: "/sample6/js/epam"
+            }]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>
+        require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
+            ready(function(){
+                var module = new CommonModule();
+                module.prepare();
+            });
+        });
+    </script>
+
+    <p>
+        Extended forEach: <button id="button1">ForEach</button>
+    </p>
+
+    <p>
+        Filtering: <button id="button2">Filter</button>
+    </p>
+
+    <p>
+        Map: <button id="button3">Map</button>
+    </p>
+
+    <p>
+        Some, at least one item: <button id="button4">Some</button>
+    </p>
+
+    <p>
+        Every, for all items: <button id="button5">Every</button>
+    </p>
+</body>
+</html>
