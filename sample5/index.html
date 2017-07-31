@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 5</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            packages: [{
+                name: "epam",
+                location: "/sample5/js/epam"
+            }]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>
+        require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
+            ready(function(){
+                var module = new CommonModule();
+                module.prepare();
+            });
+        });
+    </script>
+
+    <p>
+        Default scope: <button id="button1">Go!</button>
+    </p>
+
+    <p>
+        Designated scope: <button id="button2">Go!</button>
+    </p>
+
+    <p>
+        Clone object: <button id="button3">Clone</button>
+    </p>
+
+    <p>
+        Mixing objects together: <button id="button4">Mix!</button>
+    </p>
+
+    <p>
+        Extend object: <button id="button5">Extend</button>
+    </p>
+
+    <p>
+        Delegate object: <button id="button6">Delegate</button>
+    </p>
+</body>
+</html>

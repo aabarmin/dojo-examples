@@ -5,6 +5,7 @@ define([
 ){
     return declare("epam.FirstModule", [], {
         someMethod: function(){
+            this.inherited(arguments);
             console.log("Invocation from FirstModule");
         }
     });

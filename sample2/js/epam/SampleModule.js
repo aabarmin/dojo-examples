@@ -7,7 +7,7 @@ define([
     ready,
     dom
 ){
-    return decalre("epam.SampleModule", [], {
+    return declare("epam.SampleModule", [], {
         constructor: function(){
             ready(function(){
                 var element = dom.byId("greetings");

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample 1</title>
+    <title>Sample 3</title>
 </head>
 <body>
     <script>
@@ -10,16 +10,18 @@
             async: true, 
             packages: [{
                 name: "epam",
-                location: "js/epam"
+                location: "/sample3/js/epam"
             }]
         };
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
     <script>
-        require("epam/ChildModule", function(ChildModule){
+        require(["epam/ChildModule"], function(ChildModule){
             var module = new ChildModule();
             module.someMethod();
         });
     </script>
+
+    Watch the console
 </body>
 </html>
