@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 7</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            packages: [{
+                name: "epam",
+                location: "/sample7/js/epam"
+            }]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>
+        require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
+            ready(function(){
+                var module = new CommonModule();
+                module.prepare();
+            });
+        });
+    </script>
+
+    <p>
+        Before: <button id="button1">before</button>
+    </p>
+
+    <p>
+        After: <button id="button2">after</button>
+    </p>
+
+    <p>
+        Around: <button id="button3">around</button>
+    </p>
+</body>
+</html>

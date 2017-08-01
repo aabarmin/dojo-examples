@@ -11,8 +11,8 @@
 
 * [x] Sample 5 - Saving the scope, cloning, mixing and extending objects with dojo._base.lang
 * [x] Sample 6 - Working with arrays
-* [ ] Sample 7 - Aspect-oriented programming
-* [ ] Sample 8 - Working with events and topics
+* [x] Sample 7 - Aspect-oriented programming
+* [x] Sample 8 - Working with events and topics
 * [ ] Sample 9 - Working with promises
 
 ## UI elements library

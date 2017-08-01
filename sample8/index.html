@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 8</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            packages: [{
+                name: "epam",
+                location: "/sample8/js/epam"
+            }]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>
+        require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
+            ready(function(){
+                var module = new CommonModule();
+                module.prepare();
+            });
+        });
+    </script>
+
+    <p>
+        Subscribe to topic: <button id="button1">subscribe</button>
+    </p>
+
+    <p>
+        Publish event: <button id="button2">publish</button>
+    </p>
+
+    <p>
+        Attach listener: <button id="button3">attach</button>
+    </p>
+
+    <p>
+        Invoke action: <button id="button4">Some</button>
+    </p>
+</body>
+</html>
