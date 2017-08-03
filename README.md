@@ -13,7 +13,7 @@
 * [x] Sample 6 - Working with arrays
 * [x] Sample 7 - Aspect-oriented programming
 * [x] Sample 8 - Working with events and topics
-* [ ] Sample 9 - Working with promises
+* [x] Sample 9 - Working with promises
 
 ## UI elements library
 
