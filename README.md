@@ -19,7 +19,7 @@
 
 * [x] Sample 10 - Layout controls
 * [x] Sample 11 - Form controls
-* [ ] Sample 12 - Dialogs, tooltips and toolbars
+* [x] Sample 12 - Dialogs, tooltips and toolbars
 
 ## MVC in action
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 12</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            parseOnLoad: true
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+    <div data-dojo-type="dijit/layout/BorderContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top'">
+            <div data-dojo-type="dijit/Toolbar">
+                <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
+                    <span>Color</span>
+                    <div data-dojo-type="dijit/ColorPalette"></div>
+                </div>
+                <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
+                    <span>Dialog</span>
+                    <div data-dojo-type="dijit/TooltipDialog">
+                        <label for="first">First name:</label> <input data-dojo-type="dijit/form/TextBox" name="first" id="first"/>
+                        <br/>
+                        <label for="last">Last name:</label> <input data-dojo-type="dijit/form/TextBox" name="last" id="last"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <button data-dojo-type="dijit/form/Button" type="button" id="showDialogButton" onClick="myDialog.show();">
+                Show dialog!
+            </button>
+
+            <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:'showDialogButton',position:['below']">
+                This button <b>shows dialog</b>.
+            </div>
+        </div>
+    </div>
+
+    <div data-dojo-type="dijit/Dialog" data-dojo-id="myDialog" title="Name and Address">
+        <table class="dijitDialogPaneContentArea">
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input data-dojo-type="dijit/form/TextBox" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><input data-dojo-type="dijit/form/TextBox" name="address" id="address"></td>
+            </tr>
+        </table>
+
+        <div class="dijitDialogPaneActionBar">
+            <button data-dojo-type="dijit/form/Button" type="submit" id="ok">OK</button>
+            <button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){myDialog.hide();}"
+                    id="cancel">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
