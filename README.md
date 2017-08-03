@@ -17,7 +17,7 @@
 
 ## UI elements library
 
-* [ ] Sample 10 - Layout controls
+* [x] Sample 10 - Layout controls
 * [ ] Sample 11 - Form controls
 * [ ] Sample 12 - Dialogs, tooltips and toolbars
 
