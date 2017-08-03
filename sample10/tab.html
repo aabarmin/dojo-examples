@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 10 - Tab container</title>
+</head>
+<body>
+    <script>
+        dojoConfig = {
+            async: true, 
+            parseOnLoad: true
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+    <div data-dojo-type="dijit/layout/TabContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title: 'Tab 1 title', closable: false">
+            First tab content
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title: 'Tab 2 title'">
+            Second tab content
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title: 'Tab 3 title'">
+            Next tab content
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title: 'Tab 4 title'">
+            Last tab content
+        </div>
+    </div>
+</body>
+</html>
