@@ -1,0 +1,32 @@
+<div data-dojo-attach-point="containerNode">   
+
+<script type="dojo/require">
+        at: "dojox/mvc/at"
+</script>
+
+    <div data-dojo-type="dojox/layout/TableContainer">
+        <div data-dojo-type="dijit/form/TextBox" 
+                data-dojo-props="
+                        title: 'First field',
+                        value: at(this.dataModel, 'field1')
+                " 
+                data-dojo-attach-point="fieldOne"></div>
+
+        <div data-dojo-type="dijit/form/TextBox" 
+                data-dojo-props="
+                        title: 'Second field',
+                        value: at(this.dataModel, 'field2')
+                " 
+                data-dojo-attach-point="fieldTwo"></div>
+
+        <div data-dojo-type="dijit/form/TextBox" 
+                data-dojo-props="
+                        title: 'Third field',
+                        value: at(this.dataModel, 'field3')
+                " 
+                data-dojo-attach-point="fieldThree"></div>
+    </div>
+
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="onClick: this._onLoadButtonClick">Load</div>
+    <div data-dojo-type="dijit/form/Button" data-dojo-props="onClick: this._onGoButtonClick">Go!</div>
+</div>

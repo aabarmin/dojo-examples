@@ -24,7 +24,7 @@
 ## MVC in action
 
 * [x] Sample 13 - Widget anatomy: widget class, widget template and widget data store
-* [ ] Sample 14 - Data binding with Stateful, dojox.mvc.at and dojox.mvc.*Controller
+* [x] Sample 14 - Data binding with Stateful, dojox.mvc.at and dojox.mvc.*Controller
 
 ## Code quality and other useful tools
 
