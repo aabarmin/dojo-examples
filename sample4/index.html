@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 4</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="/common/style.css" />
     <script>
         dojoConfig = {
-            async: true, 
+            parseOnLoad: true,
             packages: [{
                 name: "epam",
                 location: "/sample4/js/epam"
+            }, {
+                name: "common",
+                location: "/common"
             }]
         };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body class="claro">
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize">
+        <div data-dojo-type="common/PresentationConsole" data-dojo-props="region: 'center'">
+            Watch console
+        </div>
+    </div>
+
     <script>
         require(["epam/ChildModule"], function(ChildModule){
             var module = new ChildModule();
             module.someMethod();
         });
     </script>
-
-    Watch the console
 </body>
 </html>

@@ -44,18 +44,21 @@ define([
             topic.subscribe("/my/topic", function(data){
                 console.log("Got an event", data);
             });
+            console.log("Subscription added");
         },
 
         showPublish: function(){
             topic.publish("/my/topic", {
                 hello: "World!"
             });
+            console.log("Event published");
         },
 
         showAttachEvent: function(){
             this.innerInstance.on("invocation", function(){
                 console.log("On method invocation");
             });
+            console.log("Listener attached");
         },
 
         showInvokeAction: function(){

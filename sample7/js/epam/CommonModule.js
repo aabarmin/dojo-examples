@@ -21,6 +21,9 @@ define([
 
             // around
             on(dom.byId("button3"), "click", lang.hitch(this, this.showAround));
+
+            // run
+            on(dom.byId("button4"), "click", lang.hitch(this, this.showFunction));
         },
 
         default: function(){
@@ -31,14 +34,14 @@ define([
             aspect.before(this, "default", function(){
                 console.log("Before function invocation");
             });
-            this.default();
+            console.log("Aspect before added");
         },
 
         showAfter: function(){
             aspect.after(this, "default", function(){
                 console.log("After function invocation");
             });
-            this.default();
+            console.log("Aspect after added");
         },
 
         showAround: function(){
@@ -49,6 +52,10 @@ define([
                     console.log("After wrapped function");
                 }
             });
+            console.log("Aspect around added");
+        },
+
+        showFunction: function(){
             this.default();
         }
     });

@@ -32,12 +32,9 @@ define([
 
         scopedFunction: function(){
             console.log(this);
-            debugger;
         },
 
         showClone: function(){
-            debugger;
-
             var currentObject = {
                 property1: "value1",
                 property2: "value2"
@@ -51,8 +48,6 @@ define([
         },
 
         showMixin: function(){
-            debugger;
-
             var object1 = {
                 property1: "value1"
             };
@@ -65,8 +60,6 @@ define([
         },
 
         showExtending: function(){
-            debugger;
-
             var SomeClass = declare([], {
                 property1: "value1"
             });
@@ -82,8 +75,6 @@ define([
         },
         
         showDelegation: function(){
-            debugger;
-
             var SomeClass = declare([], {
                 property1: "value1"
             });

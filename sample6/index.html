@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 6</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="/common/style.css" />
     <script>
         dojoConfig = {
-            async: true, 
+            parseOnLoad: true,
             packages: [{
                 name: "epam",
                 location: "/sample6/js/epam"
+            }, {
+                name: "common",
+                location: "/common"
             }]
         };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body class="claro">
     <script>
         require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
             ready(function(){
@@ -24,24 +29,32 @@
         });
     </script>
 
-    <p>
-        Extended forEach: <button id="button1">ForEach</button>
-    </p>
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize" data-dojo-props="liveSplitters: true">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <p>
+                Extended forEach: <button id="button1">ForEach</button>
+            </p>
 
-    <p>
-        Filtering: <button id="button2">Filter</button>
-    </p>
+            <p>
+                Filtering: <button id="button2">Filter</button>
+            </p>
 
-    <p>
-        Map: <button id="button3">Map</button>
-    </p>
+            <p>
+                Map: <button id="button3">Map</button>
+            </p>
 
-    <p>
-        Some, at least one item: <button id="button4">Some</button>
-    </p>
+            <p>
+                Some, at least one item: <button id="button4">Some</button>
+            </p>
 
-    <p>
-        Every, for all items: <button id="button5">Every</button>
-    </p>
+            <p>
+                Every, for all items: <button id="button5">Every</button>
+            </p>
+        </div>
+
+        <div data-dojo-type="common/PresentationConsole" data-dojo-props="region: 'bottom'">
+            Console output
+        </div>
+    </div>
 </body>
 </html>

@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 9</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="/common/style.css" />
     <script>
         dojoConfig = {
-            async: true, 
+            parseOnLoad: true,
             packages: [{
                 name: "epam",
                 location: "/sample9/js/epam"
+            }, {
+                name: "common",
+                location: "/common"
             }]
         };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body class="claro">
     <script>
         require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
             ready(function(){
@@ -24,24 +29,32 @@
         });
     </script>
 
-    <p>
-        Initalize new promise <button id="button1">Go</button>
-    </p>
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize" data-dojo-props="liveSplitters: true">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <p>
+                Initalize new promise <button id="button1">Go</button>
+            </p>
 
-    <p>
-        Resolve promise: <button id="button2">resolve</button>
-    </p>
+            <p>
+                Resolve promise: <button id="button2">resolve</button>
+            </p>
 
-    <p>
-        Update status: <button id="button3">update</button>
-    </p>
+            <p>
+                Update status: <button id="button3">update</button>
+            </p>
 
-    <p>
-        Reject promise: <button id="button4">reject</button>
-    </p>
+            <p>
+                Reject promise: <button id="button4">reject</button>
+            </p>
 
-    <p>
-        Collection of promises: <button id="button5">Go</button>
-    </p>
+            <p>
+                Collection of promises: <button id="button5">Go</button>
+            </p>
+        </div>
+
+        <div data-dojo-type="common/PresentationConsole" data-dojo-props="region: 'bottom'">
+            Console output
+        </div>
+    </div>
 </body>
 </html>

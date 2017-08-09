@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 7</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="/common/style.css" />
     <script>
         dojoConfig = {
-            async: true, 
+            parseOnLoad: true,
             packages: [{
                 name: "epam",
                 location: "/sample7/js/epam"
+            }, {
+                name: "common",
+                location: "/common"
             }]
         };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body class="claro">
     <script>
         require(["dojo/domReady", "epam/CommonModule"], function(ready, CommonModule){
             ready(function(){
@@ -24,16 +29,28 @@
         });
     </script>
 
-    <p>
-        Before: <button id="button1">before</button>
-    </p>
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize" data-dojo-props="liveSplitters: true">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+            <p>
+                Add aspect before: <button id="button1">before</button>
+            </p>
 
-    <p>
-        After: <button id="button2">after</button>
-    </p>
+            <p>
+                Add aspect after: <button id="button2">after</button>
+            </p>
 
-    <p>
-        Around: <button id="button3">around</button>
-    </p>
+            <p>
+                Add aspect around: <button id="button3">around</button>
+            </p>
+
+            <p>
+                Invoke function: <button id="button4">run</button>
+            </p>
+        </div>
+
+        <div data-dojo-type="common/PresentationConsole" data-dojo-props="region: 'bottom'">
+            Console output
+        </div>
+    </div>
 </body>
 </html>

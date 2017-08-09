@@ -38,16 +38,12 @@ define([
         },
 
         showForEach: function(){
-            debugger;
-
             array.forEach(this.arr, function(value, key){
                 console.log(key, value);
             }, this);
         },
 
         showFilter: function(){
-            debugger;
-
             var newArr = array.filter(this.arr, function(value, key){
                 return key % 2 == 0;
             }, this);
@@ -55,8 +51,6 @@ define([
         },
 
         showMap: function(){
-            debugger;
-
             var mapped = array.map(this.arr, function(value, key){
                 return key + value + key;
             }, this);
@@ -64,8 +58,6 @@ define([
         },
 
         showSome: function(){
-            debugger;
-
             var result = array.some(this.arr, function(value, key){
                 return key % 2 == 0;
             }, this);
@@ -73,8 +65,6 @@ define([
         },
 
         showEvery: function(){
-            debugger;
-
             var result = array.every(this.arr, function(value, key){
                 return key % 2 == 0;
             }, this);
