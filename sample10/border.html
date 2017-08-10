@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 10 - Border container</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="/common/style.css" />
     <script>
         dojoConfig = {
-            async: true, 
             parseOnLoad: true
         };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
-
-    <div data-dojo-type="dijit/layout/BorderContiner">
-        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'left'">
-            Left content
+    <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body class="claro">
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'left', splitter: true">
+            Left region
         </div>
-        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
-            Content in center
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region: 'center'">
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top', splitter: true">
+                Top region
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+                Central region
+            </div>
         </div>
     </div>
 </body>

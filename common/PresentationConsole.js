@@ -30,7 +30,7 @@ define([
         constructor: function(){
             aspect.after(console, 'log', lang.hitch(this, function(a, b){
                 var cnt = ["===============", json.stringify(b), "==============="];
-                this.pane.set('content', this.pane.get('content') + cnt.join("<br />") + "<br />");
+                this.pane.set('content', cnt.join("<br />") + "<br />" + this.pane.get('content'));
             }));
         },
 

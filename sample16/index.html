@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample 12</title>
+    <title>Sample 16</title>
     <link rel="stylesheet" href="/vendor/dojo-release-1.12.2-src/dijit/themes/claro/claro.css" />
     <link rel="stylesheet" href="/common/style.css" />
     <script>
@@ -10,7 +10,10 @@
             parseOnLoad: true,
             packages: [{
                 name: "epam",
-                location: "/sample14/js/epam"
+                location: "/sample16/js/epam"
+            }, {
+                name: "common",
+                location: "/common"
             }]
         };
     </script>
@@ -19,6 +22,8 @@
 <body class="claro">
 
     <div data-dojo-type="epam/ApplicationLayout">
+
+        <div data-dojo-type="epam/FormControl"></div>
 
     </div>
 

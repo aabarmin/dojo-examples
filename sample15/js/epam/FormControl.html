@@ -1,0 +1,21 @@
+<div>
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="labelWidth: 200">
+        <input type="text" data-dojo-type="dijit/form/TextBox"
+               data-dojo-attach-point="textField"
+               title="Text field"/>
+
+        <input type="text" data-dojo-type="dijit/form/DateTextBox"
+               data-dojo-attach-point="dateField"
+               title="Date field" />
+
+        <input type="checkbox" data-dojo-type="dijit/form/CheckBox"
+               data-dojo-attach-point="checkBoxField"
+               data-dojo-props="title: 'Check box'"/>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-attach-event="onClick:_setFieldValues">Set values</button>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-attach-event="onClick:_getFieldValues">Get values</button>
+    </div>
+</div>

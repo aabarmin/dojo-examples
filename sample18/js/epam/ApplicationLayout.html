@@ -1,0 +1,90 @@
+<div class="fullSize">
+    <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize">
+
+        <!-- Pay attention to this! -->
+        <div data-dojo-type="dijit/layout/AccordionContainer"
+             data-dojo-attach-point="accordionContainer"
+             data-dojo-props="region: 'left', splitter: true">
+            <div data-dojo-type="dijit/layout/ContentPane" title="Pane 1">
+                <div data-dojo-type="dojo/store/Memory" data-dojo-id="treeStore">
+                    <script type="dojo/method">
+                    this.setData([
+                        { id: 'root', name: 'Root node', children: [
+                            { id: 'node1', name: 'Child 1', children: [
+                                { id: 'leaf1', name: 'Leaf 1'}
+                            ]},
+                            { id: 'node2', name: 'Child 2', children: [
+                                { id: 'leaf2', name: 'Leaf 2'}
+                            ]}
+                        ] }
+                    ]);
+                </script>
+                    <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item">
+                    return !item.children ? [] : item.children;
+                </script>
+                </div>
+
+                <div data-dojo-type="dijit/tree/ObjectStoreModel" data-dojo-id="treeModel"
+                     data-dojo-props="store: treeStore, query: {id: 'root'}"></div>
+
+                <div data-dojo-type="dijit/Tree" data-dojo-props="model: treeModel"></div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="Pane 2">
+                Content of pane 2
+            </div>
+        </div>
+        <!-- Pay attention to this! -->
+
+        <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region: 'center'">
+            <div data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top'">
+                <button data-dojo-type="dijit/form/Button"
+                        data-dojo-attach-event="onClick: _createNewTab">
+                    Add new tab
+                </button>
+
+                <button data-dojo-type="dijit/form/Button"
+                        data-dojo-attach-event="onClick: _createNewAccordionPane">
+                    Add pane to accodion
+                </button>
+            </div>
+
+            <div data-dojo-type="dijit/layout/TabContainer"
+                 data-dojo-attach-point="tabContainer"
+                 data-dojo-props="region: 'center'">
+
+                <div data-dojo-type="dijit/layout/ContentPane" title="Form control container">
+                    <!-- Pay attention to this! -->
+                    <div data-dojo-type="dijit/TitlePane" title="Form container">
+
+                        <div data-dojo-attach-point="containerNode"></div>
+
+                    </div>
+                    <!-- Pay attention to this! -->
+
+                    <div data-dojo-type="dijit/TitlePane" title="Console">
+                        <div data-dojo-type="common/PresentationConsole"></div>
+                    </div>
+                </div>
+
+                <div data-dojo-type="dijit/layout/ContentPane" title="Rich Text editor"
+                     data-dojo-props="closable: true">
+                    <div data-dojo-type="dijit/Editor">
+                        111
+                    </div>
+                </div>
+
+                <div data-dojo-type="dijit/layout/ContentPane" title="Title panes container"
+                     data-dojo-props="closable: true">
+
+                    <div data-dojo-type="dijit/TitlePane" title="Container 1 title">
+                        Content in container
+                    </div>
+                    <div data-dojo-type="dijit/TitlePane" title="Container 2 title">
+                        Content in container
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

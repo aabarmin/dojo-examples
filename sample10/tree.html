@@ -15,10 +15,11 @@
 <body class="claro">
 <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize">
 
-    <!-- Pay attention to this! -->
     <div data-dojo-type="dijit/layout/AccordionContainer"
          data-dojo-props="region: 'left', splitter: true" id="accordionContainer">
         <div data-dojo-type="dijit/layout/ContentPane" title="Pane 1">
+
+            <!-- Pay attention to this! -->
             <div data-dojo-type="dojo/store/Memory" data-dojo-id="treeStore">
                 <script type="dojo/method">
                     this.setData([
@@ -41,12 +42,13 @@
                  data-dojo-props="store: treeStore, query: {id: 'root'}"></div>
 
             <div data-dojo-type="dijit/Tree" data-dojo-props="model: treeModel"></div>
+            <!-- Pay attention to this! -->
+
         </div>
         <div data-dojo-type="dijit/layout/ContentPane" title="Pane 2">
             Content of pane 2
         </div>
     </div>
-    <!-- Pay attention to this! -->
 
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region: 'center'">
         <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top', splitter: true">
@@ -82,103 +84,11 @@
                     );
                 </script>
             </button>
-
-            <button data-dojo-type="dijit/form/Button">
-                Form in two columns
-                <script type="dojo/on" data-dojo-event="click">
-                    require(["dijit/registry", "dojo/dom"], function(registry, dom){
-                        var node = dom.byId("tableContainer");
-                        var container = registry.byNode(node);
-                        container.set("cols", 2);
-                    });
-                </script>
-            </button>
-
-            <button data-dojo-type="dijit/form/Button">
-                Make form horizontal
-                <script type="dojo/on" data-dojo-event="click">
-                    require(["dijit/registry", "dojo/dom"], function(registry, dom){
-                        var node = dom.byId("tableContainer");
-                        var container = registry.byNode(node);
-                        container.set("orientation", "horiz");
-                    });
-                </script>
-            </button>
-
-            <button data-dojo-type="dijit/form/Button">
-                Reset form
-                <script type="dojo/on" data-dojo-event="click">
-                    require(["dijit/registry", "dojo/dom"], function(registry, dom){
-                        var node = dom.byId("tableContainer");
-                        var container = registry.byNode(node);
-                        container.set("orientation", "vert");
-                        container.set("cols", 1);
-                    });
-                </script>
-            </button>
         </div>
 
+        <!-- Pay attention to this! -->
         <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region: 'center'" id="tabContainer">
-            <div data-dojo-type="dijit/layout/ContentPane" title="Form control container">
-
-                <!-- Pay attention to this! -->
-                <div data-dojo-type="dijit/TitlePane" title="Form container">
-
-                    <div data-dojo-type="dojox/layout/TableContainer"
-                         data-dojo-props="orientation: 'vert'" id="tableContainer">
-
-                        <input type="text" data-dojo-type="dijit/form/TextBox" title="Text field"/>
-
-                        <input type="text" data-dojo-type="dijit/form/DateTextBox" title="Date field" />
-
-                        <input type="checkbox" data-dojo-type="dijit/form/CheckBox"
-                               data-dojo-props="title: 'Check box'"/>
-
-                        <select data-dojo-type="dijit/form/Select" title="Select" value="Value 1">
-                            <option>Value 1</option>
-                            <option>Value 2</option>
-                            <option>Value 3</option>
-                        </select>
-
-                        <select data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="title: 'Filtering select'">
-                            <option>Value 1</option>
-                            <option>Value 2</option>
-                            <option>Value 3</option>
-                        </select>
-
-                        <input data-dojo-type="dijit/form/NumberSpinner"
-                               title="Number spinner"
-                               data-dojo-props="smallDelta:10, constraints:{min:9,max:1550,places:0}" />
-
-                        <div data-dojo-type="dijit/form/DropDownButton">
-                            <span>Ready, go!</span>
-                            <div data-dojo-type="dijit/TooltipDialog">
-                                <button data-dojo-type="dijit/form/Button">Ok!</button>
-                            </div>
-                        </div>
-
-                        <div data-dojo-type="dijit/form/ComboButton">
-                            <span>get all mail</span>
-                            <div data-dojo-type="dijit/DropDownMenu">
-                                <div data-dojo-type="dijit/MenuItem">Yahoo</div>
-                                <div data-dojo-type="dijit/MenuItem">Google</div>
-                            </div>
-                        </div>
-
-                        <button data-dojo-type="dijit/form/ToggleButton"
-                                data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true">
-                            Toggle me
-                        </button>
-
-                        <button data-dojo-type="dijit/form/Button">Save!</button>
-                    </div>
-
-                </div>
-                <!-- Pay attention to this! -->
-
-            </div>
-
-            <div data-dojo-type="dijit/layout/ContentPane" title="Title panes container">
+            <div data-dojo-type="dijit/layout/ContentPane" title="Tab1">
 
                 <div data-dojo-type="dijit/TitlePane" title="Container 1 title">
                     Content in container
@@ -195,6 +105,8 @@
                 You can close this tab
             </div>
         </div>
+        <!-- Pay attention to this! -->
+
     </div>
 </div>
 </body>

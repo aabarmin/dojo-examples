@@ -14,12 +14,22 @@
 </head>
 <body class="claro">
 <div data-dojo-type="dijit/layout/BorderContainer" class="fullSize">
-    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'left', splitter: true">
-        Left region
+
+    <!-- Pay attention to this! -->
+    <div data-dojo-type="dijit/layout/AccordionContainer"
+         data-dojo-props="region: 'left', splitter: true" id="accordionContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" title="Pane 1">
+            Content of pane 1
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" title="Pane 2">
+            Content of pane 2
+        </div>
     </div>
+    <!-- Pay attention to this! -->
+
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region: 'center'">
         <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top', splitter: true">
-            <div data-dojo-type="dijit/form/Button">
+            <button data-dojo-type="dijit/form/Button">
                 Add new tab
                 <script type="dojo/on" data-dojo-event="click">
                     require(["dijit/registry", "dojo/dom", "dijit/layout/ContentPane"],
@@ -34,12 +44,36 @@
                         }
                     );
                 </script>
-            </div>
+            </button>
+
+            <button data-dojo-type="dijit/form/Button">
+                Add pane to accodion
+                <script type="dojo/on" data-dojo-event="click">
+                    require(["dijit/registry", "dojo/dom", "dijit/layout/ContentPane"],
+                        function(registry, dom, ContentPane){
+                            var node = dom.byId("accordionContainer");
+                            var container = registry.byNode(node);
+                            container.addChild(new ContentPane({
+                                title: "New pane",
+                                content: "I am a new accordion pane!"
+                            }));
+                        }
+                    );
+                </script>
+            </button>
         </div>
 
+        <!-- Pay attention to this! -->
         <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region: 'center'" id="tabContainer">
             <div data-dojo-type="dijit/layout/ContentPane" title="Tab1">
-                Content of tab 1
+
+                <div data-dojo-type="dijit/TitlePane" title="Container 1 title">
+                    Content in container
+                </div>
+                <div data-dojo-type="dijit/TitlePane" title="Container 2 title">
+                    Content in container
+                </div>
+
             </div>
             <div data-dojo-type="dijit/layout/ContentPane" title="Tab2">
                 Content of tab 2
@@ -48,6 +82,7 @@
                 You can close this tab
             </div>
         </div>
+        <!-- Pay attention to this! -->
 
     </div>
 </div>

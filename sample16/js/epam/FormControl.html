@@ -1,0 +1,37 @@
+<div>
+    <script type="dojo/require">
+        at: "dojox/mvc/at"
+    </script>
+
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="labelWidth: 200">
+        <input type="text" data-dojo-type="dijit/form/TextBox"
+               data-dojo-attach-point="textField"
+               data-dojo-props="
+                    value: at(this.model, 'text')
+               "
+               title="Text field"/>
+
+        <input type="text" data-dojo-type="dijit/form/DateTextBox"
+               data-dojo-attach-point="dateField"
+               data-dojo-props="
+                    value: at(this.model, 'date')
+               "
+               title="Date field" />
+
+        <input type="checkbox" data-dojo-type="dijit/form/CheckBox"
+               data-dojo-attach-point="checkBoxField"
+               data-dojo-props="
+                    checked: at(this.model, 'check')
+               "
+               title="Check box"/>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-attach-event="onClick:_getFieldValues">Get values</button>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-attach-event="onClick:_watchModel">Watch model</button>
+
+        <button data-dojo-type="dijit/form/Button"
+                data-dojo-attach-event="onClick:_watchProperty">Watch property</button>
+    </div>
+</div>
