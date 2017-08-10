@@ -28,8 +28,8 @@
 
 ## Code quality and other useful tools
 
-* [ ] Sample 15 - Typings and type check
-* [ ] Sample 16 - Testing with D.O.H
+* [x] Sample 15 - Typings and type check
+* [x] Sample 16 - Testing with D.O.H
 * [ ] Sample 17 - Building a bundle
 
 ## Going ahead
