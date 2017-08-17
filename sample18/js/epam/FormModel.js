@@ -7,7 +7,7 @@ define([
     lang,
     typed
 ) {
-    var modelClass = declare("epam.formModel", [], {
+    var modelClass = declare("epam.FormModel", [], {
         text: null,
         date: null,
         checked: null,

@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample 2</title>
-</head>
-<body>
+
     <script>
         dojoConfig = {
-            async: true, 
+            async: true,
             packages: [{
                 name: "epam",
                 location: "/sample2/js/epam"
             }]
         };
     </script>
+
     <script src="/vendor/dojo-release-1.12.2-src/dojo/dojo.js"></script>
+</head>
+<body>
     <script>
         require(["epam/SampleModule"], function(SampleModule){
             var module = new SampleModule();

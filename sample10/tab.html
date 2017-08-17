@@ -19,8 +19,10 @@
     </div>
     <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region: 'center'">
         <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'top', splitter: true">
-            <div data-dojo-type="dijit/form/Button">
+
+            <button data-dojo-type="dijit/form/Button">
                 Add new tab
+
                 <script type="dojo/on" data-dojo-event="click">
                     require(["dijit/registry", "dojo/dom", "dijit/layout/ContentPane"],
                         function(registry, dom, ContentPane){
@@ -34,7 +36,8 @@
                         }
                     );
                 </script>
-            </div>
+
+            </button>
         </div>
 
         <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region: 'center'" id="tabContainer">

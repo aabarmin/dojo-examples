@@ -7,11 +7,13 @@ define([
     FirstModule,
     SecondModule
 ){
-    return declare("epam.ChildModule", [ FirstModule, SecondModule ], {
+    return declare("epam.ChildModule", [ SecondModule, FirstModule ], {
+
         someMethod: function(){
             this.inherited(arguments);
 
             console.log("Invocation from ChildModule");
         }
+
     });
 });
